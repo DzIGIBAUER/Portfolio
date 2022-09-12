@@ -6,3 +6,19 @@ node_modules
 .env
 .env.*
 !.env.example
+
+
+# Folders in witch i put scripts to quickly test features
+test/
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
