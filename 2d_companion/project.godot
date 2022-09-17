@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "NavigationAgent2D",
+"class": "CharacterNavigationAgent2D",
+"language": "GDScript",
+"path": "res://custom_nodes/CustomNavigationAgent2D.gd"
+} ]
+_global_script_class_icons={
+"CharacterNavigationAgent2D": ""
+}
+
 [application]
 
 config/name="portfolio 2d Companion"

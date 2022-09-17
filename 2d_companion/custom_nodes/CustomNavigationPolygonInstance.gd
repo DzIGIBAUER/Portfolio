@@ -32,12 +32,14 @@ func add_platforms(rectangles_array: Array, margin: float) -> void:
 	for rect in rectangles_array:
 		rect = rect as Rect2
 		var static_body = StaticBody2D.new()
-		var collision_shape = CollisionShape.new()
+		var collision_shape = CollisionShape2D.new()
 		var rect_shape = RectangleShape2D.new()
 		
-		rect_shape.extents = rect.size
+		rect_shape.extents = rect.size / 2
+		
 		collision_shape.shape = rect_shape
 		
+		static_body.position = rect.end - Vector2(rect.size.x/2, rect.size.y/2)
 		static_body.add_child(collision_shape)
 		
 		var polygon_2d = Polygon2D.new()
