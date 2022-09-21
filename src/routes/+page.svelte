@@ -9,25 +9,30 @@
         <BehindTheScenes />
     </div>
 
-    <div class="knowledge-container">
-        <LayoutGrid>
+    <ContentContainer title="Knowledge">
+        <div class="knowledge-container">
+            <LayoutGrid>
 
-            {#each knowledgeData as data}
+                {#each knowledgeData as data}
 
-                <Cell spanDevices={{ desktop: 6, phone: 12}} style="padding: 10px">
-                    <KnowledgeDetails {...data} />
-                </Cell>
+                    <Cell spanDevices={{ desktop: 6, phone: 12}} style="padding: 10px">
+                        <KnowledgeDetails {...data} />
+                    </Cell>
 
-            {/each}
+                {/each}
 
-        </LayoutGrid>
-    </div>
+            </LayoutGrid>
+        </div>
+    </ContentContainer>
 
 </div>
 
 
 <script lang="ts">
     import Intro from "$lib/components/Intro.svelte";
+
+    import ContentContainer from "$lib/components/ContentContainer.svelte";
+
     import KnowledgeDetails from "$lib/components/KnowledgeDetails.svelte";
     import BehindTheScenes from "$lib/components/BehindTheScenes.svelte";
     import LayoutGrid, { Cell } from "@smui/layout-grid";

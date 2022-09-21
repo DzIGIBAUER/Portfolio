@@ -1,7 +1,7 @@
 
 <div class="intro-content">
     
-    <Paper elevation={15} color="primary" style="background-color: black;" >
+    <Paper elevation={15} color="primary" style="background-color: var(--mdc-theme-surface)" >
         <div class="centered">
             <Title>Welcome to my portfolio!</Title>
         </div>
@@ -37,6 +37,11 @@
 
 
 <style lang="scss">
+
+    .intro-content {
+        padding: 20px;
+    }
+
     .centered {
         text-align: center;
     }
