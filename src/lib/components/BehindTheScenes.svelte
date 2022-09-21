@@ -1,4 +1,5 @@
 <!-- TODO: This component should be separated to 3 different: scrolling effect, animated element, and current one that implements them. -->
+
 <div class="container">
     <div class="slide">
 
@@ -10,14 +11,14 @@
 
                 <div class="animate" style="animation-duration: 15s;">
                     <img
-                        src="Portfolio/favicon.png"
+                        src="Portfolio/svelte.png"
                         alt="svelte logo"
                     />
                 </div>
 
                 <div class="animate" style="animation-duration: 10s;">
                     <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+                        src="/Portfolio/react.png"
                         alt="react logo"
                     />
                 </div>
@@ -105,8 +106,8 @@
     }
 
     .container {
-        position: absolute;
-        height: 3000px;
+        position: relative;
+        height: 100%;
         width: 100%;
         overflow: hidden;
     }

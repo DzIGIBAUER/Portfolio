@@ -3,8 +3,15 @@
     <Paper square>
 
         <div class="top">
-            {#if image}
-                <img class="elevation {elevationClass} image" src={image} alt={title} />
+
+            {#if logo}
+                <div class="logo-container">
+                    <img style={imageStyle} class="elevation {elevationClass}" src={logo} alt={title} />
+                </div>
+            {:else if banner}
+                <div class="banner-container">
+                    <img style={imageStyle} src={banner} alt={title} />
+                </div>
             {/if}
 
             {#if title}
@@ -24,10 +31,13 @@
 <script lang="ts">
     import Paper, { Content } from "@smui/paper";
 
-    export let image: string | undefined = undefined;
+    export let logo: string | undefined = undefined;
+    export let banner: string | undefined = undefined;
     export let title: string | undefined = undefined;
     export let content: string | undefined = undefined;
     export let elevationClass: string = "default";
+    
+    export let imageStyle: string | undefined = undefined;
 
 </script>
 
@@ -37,11 +47,28 @@
         display: flex;
     }
 
-    .image {
+    .logo-container {
         position: relative;
-        top: -100px;
         width: 25%;
-        border-radius: 50%;
+        top: -100px;
+
+        img {
+            width: 100%;
+            height: auto;
+            background-color: gray;
+        }
+    }
+    
+    .banner-container {
+        position: relative;
+        width: 100%;
+        clear: right;
+        
+        img {
+            width: 100%;
+            height: auto;
+            background-color: gray;
+        }
     }
 
     .title {

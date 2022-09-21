@@ -31,9 +31,18 @@
             }
         }
 
+        &.django-rest-framework {
+            box-shadow: box_shadow(color-palette.$red-300);
+
+        }
+
         &.react {
             //box-shadow: 0px 0px 4px 1px color-palette.$green-900;
             box-shadow: box_shadow(color-palette.$cyan-500);
+        }
+
+        &.godot {
+            box-shadow: box_shadow(color-palette.$blue-900);
         }
     }
 </style>
