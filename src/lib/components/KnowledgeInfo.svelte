@@ -48,6 +48,8 @@
 
     import KnowledgeDetails from "$lib/components/KnowledgeDetails.svelte";
 
+    import { base } from "$app/paths";
+
     interface IKnowledgeData {
         title?: string,
         description?: string,
@@ -60,23 +62,23 @@
         {
             title: "Django",
             description: "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.",
-            logo: "/Portfolio/django.png",
+            logo: `${base}/django.png`,
             elevationClass: "django",
             imageStyle: "border-radius: 50%"
         }, {
             title: "Svelte",
             description: "Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.",
-            logo: "Portfolio/svelte.png",
+            logo: `${base}/svelte.png`,
             elevationClass: "svelte"
         }, {
             title: "React",
             description: "A JavaScript library for building user interfaces.",
-            logo: "Portfolio/react.png",
+            logo: `${base}/react.png`,
             elevationClass: "react"
         }, {
             title: "Godot",
             description: "Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface.",
-            logo: "/Portfolio/godot.png",
+            logo: `${base}/godot.png`,
             elevationClass: "godot",
             imageStyle: "border-radius: 50%"
         }

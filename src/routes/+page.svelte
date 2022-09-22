@@ -35,23 +35,12 @@
 
     import KnowledgeInfo from "$lib/components/KnowledgeInfo.svelte";
     import BehindTheScenes from "$lib/components/BehindTheScenes.svelte";
-
-    import knowledgeData from "$lib/knowledgeInfo";
 </script>
 
 <style lang="scss">
-    
-    .knowledge-container {
-        padding: 5em 0;
-        
-    }
 
     .behind-the-scenes-container {
         height: 1500px;
-    }
-    
-    .tech-stack-container {
-        padding: 20px;
     }
 
 </style>

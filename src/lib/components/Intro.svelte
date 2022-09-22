@@ -8,7 +8,7 @@
         <LayoutGrid>
             <Cell span={3}>
                 <div class="centered">
-                    <img src="Portfolio/favicon.png" alt="Miloš Kožović" />
+                    <img src="{base}/favicon.png" alt="Miloš Kožović" />
                     <p class="mdc-typography--subtitle1" >That's me!</p>
                 </div>
             </Cell>
@@ -33,6 +33,8 @@
 <script>
     import Paper, { Title, Content } from "@smui/paper";
     import LayoutGrid, { Cell } from "@smui/layout-grid";
+
+    import { base } from "$app/paths";
 </script>
 
 

@@ -8,14 +8,14 @@
 
                 <div class="animate" style="animation-duration: 15s;">
                     <img
-                        src="Portfolio/django.png"
+                        src={`${base}/django.png`}
                         alt="django logo"
                     />
                 </div>
 
                 <div class="animate" style="animation-duration: 10s;">
                     <img
-                        src="/Portfolio/django-rest-framework.png"
+                        src={`${base}/django-rest-framework.png`}
                         alt="dajngo rest framework banner"
                     />
                 </div>
@@ -28,14 +28,14 @@
 
                 <div class="animate" style="animation-duration: 15s;">
                     <img
-                        src="Portfolio/svelte.png"
+                        src={`${base}/svelte.png`}
                         alt="svelte logo"
                     />
                 </div>
 
                 <div class="animate" style="animation-duration: 10s;">
                     <img
-                        src="/Portfolio/react.png"
+                        src={`${base}/react.png`}
                         alt="react logo"
                     />
                 </div>
@@ -52,6 +52,7 @@
 
 <script lang="ts">
     import { onMount } from "svelte";
+    import { base } from "$app/paths";
 
     const offset = 100;
 
