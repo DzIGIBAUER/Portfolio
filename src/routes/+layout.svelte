@@ -14,6 +14,10 @@
         margin: 0;
     }
 
+    :global(a:hover) {
+        color: var(--mdc-theme-primary);
+    }
+
     .elevation {
 
         &.default {

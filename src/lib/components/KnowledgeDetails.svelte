@@ -46,6 +46,7 @@
         top: -60px;
         
         img {
+            backdrop-filter: blur(2px);
             display: block;
             margin: auto;
             max-width: 100%;

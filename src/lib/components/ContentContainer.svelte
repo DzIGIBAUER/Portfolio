@@ -1,6 +1,6 @@
 
 <section class="content-container" id={title.toLowerCase()}>
-    <h1 class="mdc-typography--headline1">{title}</h1>
+    <h4 class="title mdc-typography--headline4">{title}</h4>
     <slot></slot>
 </section>
 
@@ -22,8 +22,8 @@
 </script>
 
 <style>
-    h1 {
-        text-decoration: underline;
+    .title {
+        text-align: center;
         color: var(--mdc-theme-text-primary-on-background);
     }
 
