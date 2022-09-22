@@ -26,4 +26,8 @@
         text-decoration: underline;
         color: var(--mdc-theme-text-primary-on-background);
     }
+
+    .content-container {
+        padding: 20px;
+    }
 </style>

@@ -4,6 +4,23 @@
     <div class="slide">
 
         <div class="back-panel panel">
+            <div class="background">
+
+                <div class="animate" style="animation-duration: 15s;">
+                    <img
+                        src="Portfolio/django.png"
+                        alt="django logo"
+                    />
+                </div>
+
+                <div class="animate" style="animation-duration: 10s;">
+                    <img
+                        src="/Portfolio/django-rest-framework.png"
+                        alt="dajngo rest framework banner"
+                    />
+                </div>
+                
+            </div>
             <p class="mdc-typography--headline1">Backend</p>
         </div>
         <div class="front-panel panel">
@@ -34,8 +51,6 @@
 
 
 <script lang="ts">
-    import Paper from "@smui/paper";
-    import LayoutGrid, { Cell } from "@smui/layout-grid";
     import { onMount } from "svelte";
 
     const offset = 100;

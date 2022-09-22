@@ -10,19 +10,18 @@
     </div>
 
     <ContentContainer title="Knowledge">
-        <div class="knowledge-container">
-            <LayoutGrid>
 
-                {#each knowledgeData as data}
+        <InlineList
+            listObject={[
+                {title: "Languages", entries: ["Python", "JavaScript/TypeScript", "C#", "Lua", "GDScript"]},
+                {title: "Backend frameworks", entries: ["Django"]},
+                {title: "Frontend frameworks", entries: ["React", "Svelte"]},
+                {title: "Databases", entries: ["MySQL"]}
+            ]}
+        />
 
-                    <Cell spanDevices={{ desktop: 6, phone: 12}} style="padding: 10px">
-                        <KnowledgeDetails {...data} />
-                    </Cell>
-
-                {/each}
-
-            </LayoutGrid>
-        </div>
+        <KnowledgeInfo />
+        
     </ContentContainer>
 
 </div>
@@ -32,10 +31,10 @@
     import Intro from "$lib/components/Intro.svelte";
 
     import ContentContainer from "$lib/components/ContentContainer.svelte";
+    import InlineList from "$lib/components/InlineList.svelte";
 
-    import KnowledgeDetails from "$lib/components/KnowledgeDetails.svelte";
+    import KnowledgeInfo from "$lib/components/KnowledgeInfo.svelte";
     import BehindTheScenes from "$lib/components/BehindTheScenes.svelte";
-    import LayoutGrid, { Cell } from "@smui/layout-grid";
 
     import knowledgeData from "$lib/knowledgeInfo";
 </script>
@@ -48,7 +47,11 @@
     }
 
     .behind-the-scenes-container {
-        height: 3000px;
+        height: 1500px;
+    }
+    
+    .tech-stack-container {
+        padding: 20px;
     }
 
 </style>
