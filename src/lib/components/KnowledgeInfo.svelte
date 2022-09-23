@@ -6,35 +6,37 @@
         {#each knowledgeData as data}
 
             <Cell spanDevices={{ desktop: 4, phone: 12}} style="padding: 10px">
-                <KnowledgeDetails {...data}>
-                    
-                    <div class="additional-info">
-                        {#if data.title == "Django"}
-                            <p class="mdc-typohraphy--body2">
-                                Knowledge of <strong>Django Rest Framework</strong> for building web APIs that
-                                allow for authentication with JWT,
-                                follow <a target="bank" href="https://jsonapi.org/">JSON API</a> specification and more.
-                            </p>
+                <AnimateIntoView once startStyle="transform: translateY(50px);">
+                    <KnowledgeDetails {...data}>
                         
-
-                        {:else if data.title == "Godot"}
-                            <p class="mdc-typohraphy--body2">Working in Godot with both standard(GDSript) and mono(C#) version.</p>
-                        
-                        {:else if data.title == "Svelte"}
+                        <div class="additional-info">
+                            {#if data.title == "Django"}
+                                <p class="mdc-typohraphy--body2">
+                                    Knowledge of <strong>Django Rest Framework</strong> for building web APIs that
+                                    allow for authentication with JWT,
+                                    follow <a target="bank" href="https://jsonapi.org/">JSON API</a> specification and more.
+                                </p>
                             
-                        <p class="mdc-typohraphy--body2">
-                            Working with <a target="bank" href="https://sveltematerialui.com/">Svelte Material UI</a> to bring Material Desing to our websites.
-                        </p>
-                        
-                        <p class="mdc-typohraphy--body2">
-                            Using <a target="blank" href="https://kit.svelte.dev/">Svelte Kit</a> an application framework powered by Svelte.
-                        </p>
 
-                        {/if}
+                            {:else if data.title == "Godot"}
+                                <p class="mdc-typohraphy--body2">Working in Godot with both standard(GDSript) and mono(C#) version.</p>
+                            
+                            {:else if data.title == "Svelte"}
+                                
+                            <p class="mdc-typohraphy--body2">
+                                Working with <a target="bank" href="https://sveltematerialui.com/">Svelte Material UI</a> to bring Material Desing to our websites.
+                            </p>
+                            
+                            <p class="mdc-typohraphy--body2">
+                                Using <a target="blank" href="https://kit.svelte.dev/">Svelte Kit</a> an application framework powered by Svelte.
+                            </p>
 
-                    </div>
+                            {/if}
 
-                </KnowledgeDetails>
+                        </div>
+
+                    </KnowledgeDetails>
+                </AnimateIntoView>
             </Cell>
 
         {/each}
@@ -47,6 +49,7 @@
     import LayoutGrid, { Cell } from "@smui/layout-grid";
 
     import KnowledgeDetails from "$lib/components/KnowledgeDetails.svelte";
+    import AnimateIntoView from "./AnimateIntoView.svelte";
 
     import { base } from "$app/paths";
 

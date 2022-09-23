@@ -1,36 +1,38 @@
 
 <div class="container">
 
-    <div class="form-container">
-        <h4 class="mdc-typography--headline4">Send me an email</h4>
-        <TextField
-            invalid={!subjectField.valid}
-            bind:value={subjectField.value}
-            label="Subject"
-            data-fieldInfo={subjectField}
-            class="focus-event form-center"
-            input$maxlength={subjectField.max}
-            on:focus={() => {validateOnFocus(subjectField)}}
-        >
-            <HelperText slot="helper" class="helper-text" persistent>{subjectField.helperText}</HelperText>
-        </TextField>
+    <AnimateIntoView startStyle="transform: translateY(50px);" once>
+        <div class="form-container">
+                <h4 class="mdc-typography--headline4">Send me an email</h4>
+            <TextField
+                invalid={!subjectField.valid}
+                bind:value={subjectField.value}
+                label="Subject"
+                data-fieldInfo={subjectField}
+                class="focus-event form-center"
+                input$maxlength={subjectField.max}
+                on:focus={() => {validateOnFocus(subjectField)}}
+            >
+                <HelperText slot="helper" class="helper-text" persistent>{subjectField.helperText}</HelperText>
+            </TextField>
 
-        <TextField
-            textarea bind:value={bodyField.value}
-            label="Content"
-            data-fieldInfo={bodyField}
-            class="focus-event form-center"
-            invalid={!bodyField.valid}
-            input$maxlength={bodyField.max}
-            on:focus={() => {validateOnFocus(bodyField)}}
-        >
-            <CharacterCounter slot="internalCounter">0 / {bodyField.max}</CharacterCounter>
-            <HelperText slot="helper" class="helper-text" persistent>{bodyField.helperText}</HelperText>
-        </TextField>
-        <Button on:click={sendEmail}>
-            <Label>Send</Label>
-        </Button>
-    </div>
+            <TextField
+                textarea bind:value={bodyField.value}
+                label="Content"
+                data-fieldInfo={bodyField}
+                class="focus-event form-center"
+                invalid={!bodyField.valid}
+                input$maxlength={bodyField.max}
+                on:focus={() => {validateOnFocus(bodyField)}}
+            >
+                <CharacterCounter slot="internalCounter">0 / {bodyField.max}</CharacterCounter>
+                <HelperText slot="helper" class="helper-text" persistent>{bodyField.helperText}</HelperText>
+            </TextField>
+            <Button color="primary" variant="outlined" class="form-submit" on:click={sendEmail}>
+                <Label>Send</Label>
+            </Button>
+        </div>
+    </AnimateIntoView>
 
     
     {#if additionalContacts}
@@ -69,6 +71,8 @@
     import HelperText from '@smui/textfield/helper-text';
     import Button, { Label } from '@smui/button';
     import List, { Item, Graphic, Text, PrimaryText, SecondaryText } from "@smui/list";
+
+    import AnimateIntoView from "$lib/components/AnimateIntoView.svelte";
 
     interface IContact {
         platform: string,
@@ -149,6 +153,10 @@
 
         :global(.form-center) {
             width: 100%;
+            margin: 10px;
+        }
+
+        :global(.form-submit) {
             margin: 10px;
         }
 

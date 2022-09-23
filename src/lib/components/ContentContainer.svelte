@@ -1,6 +1,8 @@
 
 <section class="content-container" id={title.toLowerCase()}>
-    <h4 class="title mdc-typography--headline4">{title}</h4>
+    <AnimateIntoView once>
+        <h4 class="title mdc-typography--headline4">{title}</h4>
+    </AnimateIntoView>
     <slot></slot>
 </section>
 
@@ -8,6 +10,8 @@
 
 <script lang="ts">
     import { onMount } from "svelte";
+
+    import AnimateIntoView from "$lib/components/AnimateIntoView.svelte";
 
     onMount(() => {
         if (!window.location.hash) return;
