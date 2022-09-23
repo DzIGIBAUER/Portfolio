@@ -28,6 +28,29 @@
         <ProjectsInfo />
     </ContentContainer>
 
+    <ContentContainer title="Contact">
+        <ContactInfo
+            email="milosh2255@gmail.com"
+            additionalContacts={[
+                {
+                    platform: "Youtube",
+                    url: new URL("https://www.youtube.com/channel/UCPf-EY4-g7p2J6A4sl8gf9A"),
+                    description: "My youtube channel",
+                    icon: "youtube.png"
+                }, {
+                    platform: "Discord",
+                    description: "My discord handle: eMyx#0300",
+                    icon: "discord.png"
+                }, {
+                    platform: "Github",
+                    url: new URL("https://github.com/DzIGIBAUER"),
+                    description: "My github profile",
+                    icon: "github.png"
+                }
+            ]}
+        />
+    </ContentContainer>
+
 </div>
 
 
@@ -39,6 +62,7 @@
 
     import KnowledgeInfo from "$lib/components/KnowledgeInfo.svelte";
     import ProjectsInfo from "$lib/components/ProjectsInfo.svelte";
+    import ContactInfo from "$lib/components/ContactInfo.svelte";
     import BehindTheScenes from "$lib/components/BehindTheScenes.svelte";
 </script>
 

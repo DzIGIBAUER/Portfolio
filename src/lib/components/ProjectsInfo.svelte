@@ -19,7 +19,7 @@
                         <p class="mdc-typography--body1">{project.description}</p>
                     {/if}
 
-                    <a href={project.url.toString()} target="blank">Visit project page.</a>
+                    <a href={project.url.toString()} target="_blank">Visit project page.</a>
                 </Content>
             </Panel>
 

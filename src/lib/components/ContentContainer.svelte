@@ -10,6 +10,8 @@
     import { onMount } from "svelte";
 
     onMount(() => {
+        if (!window.location.hash) return;
+        
         const element = document.querySelector(window.location.hash) as HTMLElement;
         if (!element) return;
         
