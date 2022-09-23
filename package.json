@@ -22,6 +22,7 @@
 		"@smui-extra/accordion": "^6.1.1",
 		"@smui/button": "^6.1.0",
 		"@smui/common": "^6.1.0",
+		"@smui/icon-button": "^6.1.0",
 		"@smui/layout-grid": "^6.1.0",
 		"@smui/paper": "^6.1.0",
 		"@sveltejs/adapter-auto": "next",

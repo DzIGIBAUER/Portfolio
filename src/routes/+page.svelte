@@ -24,6 +24,10 @@
         
     </ContentContainer>
 
+    <ContentContainer title="Projects">
+        <ProjectsInfo />
+    </ContentContainer>
+
 </div>
 
 
@@ -34,6 +38,7 @@
     import InlineList from "$lib/components/InlineList.svelte";
 
     import KnowledgeInfo from "$lib/components/KnowledgeInfo.svelte";
+    import ProjectsInfo from "$lib/components/ProjectsInfo.svelte";
     import BehindTheScenes from "$lib/components/BehindTheScenes.svelte";
 </script>
 
