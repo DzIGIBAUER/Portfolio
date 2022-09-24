@@ -20,6 +20,15 @@
                     {/if}
 
                     <a href={project.url.toString()} target="_blank">Visit project page.</a>
+                    {#if project.warnings}
+                        <div class="warnings">
+                            {#each project.warnings as warning}
+                                <div class="warning">
+                                    <p class="warning-text"><Icon style="padding-right: 5px;" class="material-icons">warning</Icon>{warning}</p>
+                                </div>
+                            {/each}
+                        </div>
+                    {/if}
                 </Content>
             </Panel>
 
@@ -39,16 +48,32 @@
     interface IProject {
         name: string,
         description?: string,
-        url: URL
+        url: URL,
+        warnings?: Array<string>
     }
 
     const projects: IProject[] = [
         {
             name: "MTA RPG Gamemode",
             description: "RPG Gamemode for Multi Theft Auto: San Andreas.",
-            url: new URL("https://github.com/DzIGIBAUER/mta_rpg")
+            url: new URL("https://github.com/DzIGIBAUER/mta_rpg"),
+            warnings: ["Repository is available in Serbian language only."]
+        }, {
+            name: "CNC Turning Simulation",
+            description: "CNC turning simulation done in Godot Game Engine.",
+            url: new URL("https://github.com/DzIGIBAUER/CncSimulajica"),
+            warnings: ["Repository is available in Serbian language only."]
         }
     ]
 
     const openPanels: {[key: number]: boolean} = {};
 </script>
+
+
+<style>
+
+    .warning-text {
+        display: flex;
+    }
+
+</style>
