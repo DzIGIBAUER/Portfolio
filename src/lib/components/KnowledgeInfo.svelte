@@ -89,7 +89,13 @@
 </script>
 
 <style>
+
+    .knowledge-container {
+        padding-top: 15px;
+    }
+
     .additional-info {
         padding-top: 15px;
     }
+
 </style>

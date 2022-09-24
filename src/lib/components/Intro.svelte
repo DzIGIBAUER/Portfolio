@@ -6,7 +6,7 @@
             <Title>Welcome to my portfolio!</Title>
         </div>
         <LayoutGrid>
-            <Cell span={3}>
+            <Cell spanDevices={{ desktop: 3, phone: 12 }}>
                 <div class="centered">
                     <img src="{base}/favicon.png" alt="Miloš Kožović" />
                     <p class="mdc-typography--subtitle1" >That's me!</p>

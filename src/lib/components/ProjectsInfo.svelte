@@ -24,7 +24,7 @@
                         <div class="warnings">
                             {#each project.warnings as warning}
                                 <div class="warning">
-                                    <p class="warning-text"><Icon style="padding-right: 5px;" class="material-icons">warning</Icon>{warning}</p>
+                                    <p class="warning-text"><Icon style="margin: auto; padding-right: 5px;" class="material-icons">warning</Icon>{warning}</p>
                                 </div>
                             {/each}
                         </div>

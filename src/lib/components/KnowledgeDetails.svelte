@@ -40,6 +40,10 @@
 
 <style lang="scss">
 
+    .details-container {
+        margin-top: 15px;
+    }
+
     .logo-container {
         position: relative;
         height: 100px;

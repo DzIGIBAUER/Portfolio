@@ -38,7 +38,7 @@
     {#if additionalContacts}
         <div class="contact">
             <h4 class="mdc-typography--subtitle1">You can also find me on...</h4>
-            <List nonInteractive>
+            <List class="additional-contacts" nonInteractive>
                 {#each additionalContacts as contact}
 
                         <Item>
@@ -166,8 +166,14 @@
         }
     }
 
-    .contact {
-        width: 50%;
+    :global(.additional-contacts) {
+        display: flex;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .form-container {
+            width: 100%;
+        }
     }
 
 </style>
