@@ -50,7 +50,7 @@
             ]}
         />
     </ContentContainer>
-
+    <Footer />
 </div>
 
 
@@ -64,6 +64,7 @@
     import ProjectsInfo from "$lib/components/ProjectsInfo.svelte";
     import ContactInfo from "$lib/components/ContactInfo.svelte";
     import BehindTheScenes from "$lib/components/BehindTheScenes.svelte";
+    import Footer from "$lib/components/Footer.svelte";
 </script>
 
 <style lang="scss">
