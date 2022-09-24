@@ -6,7 +6,7 @@
 @use '@material/theme/index' as theme with (
   $primary: color-palette.$deep-orange-500,
   $secondary: color.scale(#676778, $whiteness: -10%),
-  $surface: color-palette.$grey-800,
+  $surface: color.scale(color-palette.$grey-900, $lightness: -10%),
   $background: color.scale(color-palette.$grey-900, $lightness: -10%),
   $error: color-palette.$red-700
 );

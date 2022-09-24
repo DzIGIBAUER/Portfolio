@@ -1,26 +1,18 @@
 
 <div class="intro-content">
     
-    <Paper color="primary" style="background-color: var(--mdc-theme-surface)" >
-        <div class="centered">
-            <Title>Welcome to my portfolio!</Title>
-        </div>
+    <Paper color="primary" variant="unelevated" style="background-color: var(--mdc-theme-surface)" >
         <LayoutGrid>
             <Cell spanDevices={{ desktop: 3, phone: 12 }}>
                 <div class="centered">
-                    <img src="{base}/favicon.png" alt="Miloš Kožović" />
-                    <p class="mdc-typography--subtitle1" >That's me!</p>
+                    <img src="{base}/me.png" class="elevation default" alt="Miloš Kožović" />
                 </div>
             </Cell>
             <Cell span={5}>
                 <Content>
-                    <p class="mdc-typography--body1">But how am I?</p>
-                    <p class="mdc-typography--body1 custom">
-                        I am a fullstack developer based in
-                        <span style="color: red">Se</span><!--
-                        --><span style="color: blue">rb</span><!--
-                        --><span style="color: white">ia</span>
-                    </p>
+                    <h1 class="mdc-typography--headline4">Miloš Kožović<h1>
+                    <p class="mdc-typography--body1">Machine technician for computer control (CNC) and software developer based in Serbia.</p>
+                    <p class="mdc-typography--body1">Interested in web and game development.</p>
                 </Content>
             </Cell>
         </LayoutGrid>
@@ -52,5 +44,8 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+
+        width: 175px;
+        border-radius: 50%;
     }
 </style>

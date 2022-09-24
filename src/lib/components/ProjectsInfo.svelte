@@ -2,11 +2,11 @@
 
 <div class="container">
 
-    <Accordion>
+    <Accordion multiple>
 
         {#each projects as project, i}
 
-            <Panel bind:open={openPanels[i]}>
+            <Panel variant="outlined" color="primary" bind:open={openPanels[i]}>
                 <Header>
                     {project.name}
                     <IconButton slot="icon" toggle pressed={openPanels[i]}>
@@ -24,7 +24,7 @@
                         <div class="warnings">
                             {#each project.warnings as warning}
                                 <div class="warning">
-                                    <p class="warning-text"><Icon style="margin: auto; padding-right: 5px;" class="material-icons">warning</Icon>{warning}</p>
+                                    <p class="warning-text"><Icon style="margin: auto 0; padding-right: 5px;" class="material-icons">warning</Icon>{warning}</p>
                                 </div>
                             {/each}
                         </div>

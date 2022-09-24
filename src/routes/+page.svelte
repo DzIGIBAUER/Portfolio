@@ -13,7 +13,7 @@
 
         <InlineList
             listObject={[
-                {title: "Languages", entries: ["Python", "JavaScript/TypeScript", "C#", "Lua", "GDScript"]},
+                {title: "Languages", entries: ["Python", "JavaScript/TypeScript", "C#", "Lua", "GDScript", "G-Code"]},
                 {title: "Backend frameworks", entries: ["Django"]},
                 {title: "Frontend frameworks", entries: ["React", "Svelte"]},
                 {title: "Databases", entries: ["MySQL"]}

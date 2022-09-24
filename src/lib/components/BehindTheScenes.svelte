@@ -21,7 +21,7 @@
                 </div>
                 
             </div>
-            <p class="mdc-typography--headline1">Backend</p>
+            <p class="mdc-typography--headline1 main-panel-text">Backend</p>
         </div>
         <div class="front-panel panel">
             <div class="background">
@@ -42,7 +42,7 @@
                 
             </div>
             
-            <p class="mdc-typography--headline1">Frontend</p>
+            <p class="mdc-typography--headline1 main-panel-text">Frontend</p>
         </div>
 
     </div>
@@ -161,21 +161,29 @@
         top: 0;
         left: 0;
         width: 90%;
-        height: 90%;
-        margin: 5%;
+        height: 80%;
+        padding: 5%;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
         .animate {
             border-radius: 30%;
-            width: 200px;
+            width: 350px;
             animation: bck-el-anim ease-in-out infinite;
         
             img {
                 width: 100%;
             }
         }
+    }
+
+    .main-panel-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        height: 100%;
     }
 
 </style>

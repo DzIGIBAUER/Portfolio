@@ -24,12 +24,18 @@
                             {:else if data.title == "Svelte"}
                                 
                             <p class="mdc-typohraphy--body2">
-                                Working with <a target="bank" href="https://sveltematerialui.com/">Svelte Material UI</a> to bring Material Desing to our websites.
+                                Working with <a target="_blank" href="https://sveltematerialui.com/">Svelte Material UI</a> to bring Material Desing to your website.
                             </p>
                             
                             <p class="mdc-typohraphy--body2">
-                                Using <a target="blank" href="https://kit.svelte.dev/">Svelte Kit</a> an application framework powered by Svelte.
+                                Using <a target="_blank" href="https://kit.svelte.dev/">Svelte Kit</a> an application framework powered by Svelte.
                             </p>
+
+                            {:else if data.title == "React"}
+                                <p class="mdc-typohraphy--body2">
+                                    Working with <a target="_blank" href="https://mui.com/">React MUI</a> to bring Material Desing to your website.
+                                </p>
+
 
                             {/if}
 
