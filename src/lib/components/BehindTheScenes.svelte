@@ -119,6 +119,7 @@
         height: 600px;
         transform: perspective(500px) translate3d(0, -100px, -250px) rotate3d(0, 1, 0, -10deg);
         transform-origin: bottom center;
+        overflow: hidden;
     }
 
     .container {
@@ -158,6 +159,7 @@
 
     .background {
         position: absolute;
+        z-index: -1;
         top: 0;
         left: 0;
         width: 90%;
@@ -184,6 +186,7 @@
         align-items: center;
         margin: auto;
         height: 100%;
+        text-shadow: 4px 4px black;
     }
 
 </style>

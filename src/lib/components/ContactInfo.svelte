@@ -39,25 +39,27 @@
         <div class="contact">
             <h4 class="mdc-typography--subtitle1">You can also find me on...</h4>
             <List class="additional-contacts" nonInteractive>
-                {#each additionalContacts as contact}
-
-                        <Item>
-                            {#if contact.icon}
-                                <Graphic style={`background-image: url(${contact.icon}); background-size: cover;`} />
-                            {/if}
-                            <Text>
-                                <PrimaryText>
-                                    {#if contact.url}
-                                        <a target="_blank" href={contact.url?.toString()}>{contact.platform}</a>
-                                    {:else}
-                                        {contact.platform}
-                                    {/if}
-                                </PrimaryText>
-                                <SecondaryText>{contact.description}</SecondaryText>
-                            </Text>
-                        </Item>
-
-                {/each}
+                <LayoutGrid>
+                    {#each additionalContacts as contact}
+                        <Cell spanDevices={{ desktop: 4, phone: 6 }}>
+                            <Item>
+                                {#if contact.icon}
+                                    <Graphic style={`background-image: url(${contact.icon}); background-size: cover;`} />
+                                {/if}
+                                <Text>
+                                    <PrimaryText>
+                                        {#if contact.url}
+                                            <a target="_blank" href={contact.url?.toString()}>{contact.platform}</a>
+                                        {:else}
+                                            {contact.platform}
+                                        {/if}
+                                    </PrimaryText>
+                                    <SecondaryText>{contact.description}</SecondaryText>
+                                </Text>
+                            </Item>
+                        </Cell>
+                    {/each}
+                </LayoutGrid>
             </List>
         </div>
     {/if}
@@ -71,6 +73,7 @@
     import HelperText from '@smui/textfield/helper-text';
     import Button, { Label } from '@smui/button';
     import List, { Item, Graphic, Text, PrimaryText, SecondaryText } from "@smui/list";
+    import LayoutGrid, { Cell } from "@smui/layout-grid";
 
     import AnimateIntoView from "$lib/components/AnimateIntoView.svelte";
 
